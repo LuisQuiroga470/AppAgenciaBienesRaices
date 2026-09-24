@@ -25,6 +25,14 @@ La aplicación permite iniciar sesión con cualquiera de estas cuentas:
 7. Usar **Editar** para modificar un registro o **Eliminar** para quitarlo.
 8. Presionar **Volver** para regresar al panel principal.
 
+## Evento de Firebase Analytics
+
+Firebase Analytics está configurado en la pantalla de inicio de sesión, dentro de `MainActivity.kt`.
+
+Cada vez que se presiona el botón **Iniciar sesión**, la aplicación registra el evento personalizado `clic_iniciar_sesion`. El evento sirve para saber cuántas veces se intenta usar el inicio de sesión y se puede revisar en Firebase Console, en **Analytics → DebugView** durante las pruebas.
+
+El evento no envía el nombre de usuario ni la contraseña. Solo registra que el botón fue presionado. En los reportes normales de Analytics, los datos pueden tardar algunas horas en aparecer.
+
 ## Mantenedores
 
 Cada mantenedor muestra sus registros en tarjetas desplazables, con todos sus atributos e ID automático.
