@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos_propiedad">
+        <item>Casa</item>
+        <item>Departamento</item>
+        <item>Oficina</item>
+        <item>Terreno</item>
+        <item>Local</item>
+        <item>Bodega</item>
+    </string-array>
+    <string-array name="estados_propiedad">
+        <item>Disponible</item>
+        <item>Reservado</item>
+        <item>Vendida</item>
+        <item>Arrendada</item>
+    </string-array>
+    <string-array name="estados_agente">
+        <item>Activo</item>
+        <item>Inactivo</item>
+    </string-array>
+</resources>

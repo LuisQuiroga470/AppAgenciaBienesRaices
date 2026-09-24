@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Plantilla del formulario; se reutiliza para agregar y editar registros. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/txtTituloFormulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar registro"
+            android:textColor="#216E42"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtIdFormulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="ID: se genera al guardar"
+            android:textColor="#222222"
+            android:textSize="18sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tipo"
+            android:labelFor="@id/tipo"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <Spinner
+            android:id="@+id/tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:entries="@array/tipos_propiedad"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dirección"
+            android:labelFor="@id/direccion"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="text"
+            android:hint="Dirección"
+            android:backgroundTint="#216E42"
+            android:textColor="#222222"
+            android:textColorHint="#64748B"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Comuna / ciudad"
+            android:labelFor="@id/comuna"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/comuna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="text"
+            android:hint="Comuna / ciudad"
+            android:backgroundTint="#216E42"
+            android:textColor="#222222"
+            android:textColorHint="#64748B"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Superficie del terreno (m²)"
+            android:labelFor="@id/superficie"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/superficie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="numberDecimal"
+            android:hint="Superficie del terreno (m²)"
+            android:backgroundTint="#216E42"
+            android:textColor="#222222"
+            android:textColorHint="#64748B"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dormitorios"
+            android:labelFor="@id/dormitorios"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/dormitorios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="text"
+            android:hint="Cantidad o N/A"
+            android:backgroundTint="#216E42"
+            android:textColor="#222222"
+            android:textColorHint="#64748B"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Baños"
+            android:labelFor="@id/banos"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/banos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="text"
+            android:hint="Cantidad o N/A"
+            android:backgroundTint="#216E42"
+            android:textColor="#222222"
+            android:textColorHint="#64748B"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Precio de venta"
+            android:labelFor="@id/precioVenta"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/precioVenta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="numberDecimal"
+            android:hint="Precio de venta"
+            android:backgroundTint="#216E42"
+            android:textColor="#222222"
+            android:textColorHint="#64748B"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Precio de arriendo"
+            android:labelFor="@id/precioArriendo"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/precioArriendo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="numberDecimal"
+            android:hint="Precio de arriendo"
+            android:backgroundTint="#216E42"
+            android:textColor="#222222"
+            android:textColorHint="#64748B"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Estado"
+            android:labelFor="@id/estado"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <Spinner
+            android:id="@+id/estado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:entries="@array/estados_propiedad"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Descripción"
+            android:labelFor="@id/descripcion"
+            android:textColor="#216E42"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:inputType="textMultiLine"
+            android:hint="Descripción"
+            android:backgroundTint="#216E42"
+            android:textColor="#222222"
+            android:textColorHint="#64748B"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="end">
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#64748B"
+                android:textColor="#FFFFFF"
+                android:text="Cancelar" />
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#216E42"
+                android:textColor="#FFFFFF"
+                android:text="Guardar" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
