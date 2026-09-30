@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
 
 class GestionPropiedades : AppCompatActivity() {
     private val registros = Datos.propiedades
@@ -25,7 +26,18 @@ class GestionPropiedades : AppCompatActivity() {
         findViewById<FloatingActionButton>(R.id.btnAgregar).setOnClickListener {
             abrirFormulario(null)
         }
+        actualizarUI()
         mostrarRegistros()
+    }
+
+    private fun actualizarUI() {
+        val txtUsuario = findViewById<TextView>(R.id.txtUsuarioPropiedades)
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null && !user.email.isNullOrEmpty()) {
+            txtUsuario.text = "Usuario: ${user.email}"
+        } else {
+            txtUsuario.text = "Usuario: Sin sesión"
+        }
     }
 
     private fun mostrarRegistros() {

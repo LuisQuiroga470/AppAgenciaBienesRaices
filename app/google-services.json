@@ -12,7 +12,20 @@
           "package_name": "com.luisq.appagenciabienesraices"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "586326736080-bf2mv2vo543nia5990pc0e1pie0r55ql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luisq.appagenciabienesraices",
+            "certificate_hash": "3d4fd47ea225edefb073f66c3feee3d0c3237c61"
+          }
+        },
+        {
+          "client_id": "586326736080-fqfq70cgc0ua6ac07i8ijit8o2kknpfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAL4szzw5zs6RLwLnXEzZNs491q7m4ssuM"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586326736080-fqfq70cgc0ua6ac07i8ijit8o2kknpfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

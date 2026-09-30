@@ -1,48 +1,37 @@
 # App Agencia Bienes Raíces
 
-Aplicación Android desarrollada en Kotlin para administrar propiedades, clientes y agentes inmobiliarios.
+Aplicación Android desarrollada en Kotlin para la gestión y administración de propiedades, clientes y agentes inmobiliarios, integrada con Firebase Authentication, Firebase Firestore y Firebase Analytics.
 
-## Credenciales de acceso
+---
 
-La aplicación permite iniciar sesión con cualquiera de estas cuentas:
+## Métodos de Autenticación Integrados
 
-| Usuario | Contraseña |
-|---|---|
-| `admin` | `1234` |
-| `luis` | `1234` |
+La aplicación cuenta con inicio de sesión seguro gestionado a través de Firebase Authentication:
 
-## Recorrido básico
+1. **Correo y Contraseña:** 
+   - Permite iniciar sesión con credenciales registradas.
+   - Formulario de Registro de Nuevos Usuarios con almacenamiento automático del perfil en Cloud Firestore.
+2. **Google Sign-In (Gmail):** 
+   - Inicio de sesión con un solo clic mediante la API de Google Sign-In (OAuth2).
+   - Selector forzado de cuentas para elegir o cambiar de cuenta Gmail fácilmente.
+3. **Microsoft Sign-In (Outlook / Hotmail):** 
+   - Inicio de sesión federado mediante Microsoft Azure / Entra ID (OAuthProvider).
 
-1. Abrir la aplicación.
-2. Ingresar usuario y contraseña.
-3. Presionar **Iniciar sesión**.
-4. En el panel principal, elegir uno de los mantenedores:
-   - Propiedades.
-   - Clientes / compradores.
-   - Agentes inmobiliarios.
-5. Presionar el botón **+** para agregar un registro.
-6. Completar el formulario y presionar **Guardar**.
-7. Usar **Editar** para modificar un registro o **Eliminar** para quitarlo.
-8. Presionar **Volver** para regresar al panel principal.
+---
 
-## Evento de Firebase Analytics
+## Funcionalidades y Pantallas
 
-Firebase Analytics está configurado en la pantalla de inicio de sesión, dentro de `MainActivity.kt`.
+- **Visualización de Usuario Activo:** Todas las pantallas (PanelPrincipal, GestionPropiedades, GestionClientes, GestionAgentes) disponen del método actualizarUI() que identifica y muestra el correo del usuario actualmente autenticado en la barra superior.
+- **Navegación Intuitiva:** Botón de regreso integrado en el formulario de registro y en los tres mantenedores.
+- **Mantenedores CRUD en Memoria:**
+  - **Propiedades:** Interfaz temática en tonos verdes.
+  - **Clientes / Compradores:** Interfaz temática en tonos azules.
+  - **Agentes Inmobiliarios:** Interfaz temática en tonos oscuros.
 
-Cada vez que se presiona el botón **Iniciar sesión**, la aplicación registra el evento personalizado `clic_iniciar_sesion`. El evento sirve para saber cuántas veces se intenta usar el inicio de sesión y se puede revisar en Firebase Console, en **Analytics → DebugView** durante las pruebas.
+---
 
-El evento no envía el nombre de usuario ni la contraseña. Solo registra que el botón fue presionado. En los reportes normales de Analytics, los datos pueden tardar algunas horas en aparecer.
+## Firebase Analytics
 
-## Mantenedores
-
-Cada mantenedor muestra sus registros en tarjetas desplazables, con todos sus atributos e ID automático.
-
-- Propiedades: usa una interfaz verde.
-- Clientes: usa una interfaz azul.
-- Agentes inmobiliarios: usa una interfaz negra.
-
-Los datos se mantienen en memoria mientras la aplicación está abierta. No se utiliza una base de datos, por lo que los registros se pierden si Android termina el proceso de la aplicación.
-
-## APK
-
-El APK de prueba se encuentra en [APK/app-debug.apk](APK/app-debug.apk).
+Firebase Analytics está integrado en la aplicación para registrar métricas de uso:
+- Evento personalizado Formulario_registro al ingresar a la pantalla de registro.
+- Seguimiento de eventos disponible en Firebase Console -> Analytics -> DebugView.
